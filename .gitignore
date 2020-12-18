@@ -10,6 +10,17 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/public
+/public/frontend/contactform
+/public/frontend/img
+/public/frontend/js
+/public/frontend/lib
+/public/backend/.github
+/public/backend/bower_components
+/public/backend/build
+/public/backend/dist
+/public/backend/docs
+/public/backend/js
+/public/backend/plugins
+/public/backend/pages
 
 

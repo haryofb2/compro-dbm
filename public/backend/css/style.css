@@ -1,0 +1,19 @@
+/* .jumbotron1{
+    background: rgba(94, 103, 109,0.9);
+    height: fit-content;
+
+} */
+
+#dashboard{
+  background-image: url(../../frontend/img/DJI_0360.png);
+  height: 900px;
+  width: 1825px;
+  position: relative;
+}
+
+#dashboard::after{
+  height: 900px;
+  width: 1825px;
+  background: rgba(76, 77, 78, 0.9);
+  position: absolute;
+}

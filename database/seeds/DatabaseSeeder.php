@@ -21,6 +21,9 @@ class DatabaseSeeder extends Seeder
             InfoSeeder::class,
             EventSeeder::class,
             ServiceSeeder::class,
+            CatmenuSeeder::class,
+            MenuSeeder::class,
+
             // CategoryPictureSeeder::class,
             // GallerySeeder::class,
             // CategoryInfoSeeder::class,

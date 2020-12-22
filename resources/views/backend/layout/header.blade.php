@@ -1,16 +1,20 @@
-<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+<nav class="main-header navbar navbar-expand bg-dark navbar-light">
     <!-- Left navbar links -->
-    <ul class="navbar-nav">
+    <ul class="navbar-nav" >
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="/backend/#" role="button"><i class="fas fa-bars"></i></a>
+        <a class="nav-link" data-widget="pushmenu" href="/backend/#" role="button" style="color: white !important"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/backend/index3.html" class="nav-link">Home</a>
+        <a href="/home" class="nav-link" style="color: white; font-size:20px !important">Home</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
+      {{-- <li class="nav-item d-none d-sm-inline-block">
         <a href="/backend/#" class="nav-link">Contact</a>
-      </li>
+      </li> --}}
     </ul>
+    <div class="head">
+        {{-- <h1 class="text">welcome to dbm admin compro</h1> --}}
+
+    </div>
 
     <!-- SEARCH FORM -->
     {{-- <form class="form-inline ml-3">

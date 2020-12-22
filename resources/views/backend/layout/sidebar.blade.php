@@ -59,25 +59,25 @@
                 <p>CABANG</p>
                 </a>
               </li>
-              <li class="nav-item">
+              {{-- <li class="nav-item">
                 <a href="{{route('backend_menu.index')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>MENU</p>
                 </a>
-              </li>
+              </li> --}}
             </ul>
-            {{-- @foreach ($menu as $menu) --}}
-            {{-- <li class="nav-item"> --}}
-                {{-- <a href="{{route('$menu->link}}.index')}}" class="nav-link"> --}}
-                    {{-- <i class="nav-icon far fa-image"></i> --}}
-                  {{-- <p>
-                    {{$menu->name}}
+            {{-- @foreach ($menu as $m)
+            <li class="nav-item">
+                <a href="/{{$m->link}}" class="nav-link">
+                    <i class="nav-icon far fa-image"></i>
+                  <p>
+                    {{$m->name}}
                   </p>
                 </a>
               </li>
             @endforeach --}}
 
-          {{-- <li class="nav-item">
+          <li class="nav-item">
             <a href="{{route('backend_info.index')}}" class="nav-link">
                 <i class="nav-icon far fa-image"></i>
               <p>
@@ -100,7 +100,7 @@
                 PARTNER
               </p>
             </a>
-          </li> --}}
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

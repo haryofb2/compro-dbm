@@ -5,16 +5,16 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Menu extends Model
+class CatMenu extends Model
 {
-    protected $table = 'w_m_menus';
+    protected $table = 'w_m_category_menus';
     use SoftDeletes;
     protected $dates = ['deleted_at'];
 
     protected $guarded = [];
 
-    public function catmenu()
+    public function menu()
     {
-        return $this->belongsTo(CatMenu::class);
+        return $this->hasMany(Menu::class);
     }
 }

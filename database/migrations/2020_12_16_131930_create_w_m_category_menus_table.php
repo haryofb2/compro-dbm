@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWMMenusTable extends Migration
+class CreateWMCategoryMenusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,12 @@ class CreateWMMenusTable extends Migration
      */
     public function up()
     {
-        Schema::create('w_m_menus', function (Blueprint $table) {
+        Schema::create('w_m_category_menus', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('category')->unsigned();
-            $table->string('link');
             $table->softDeletes();
             $table->timestamps();
         });
-
-        Schema::table('w_m_menus', function (Blueprint $table) {
-            $table->foreign('category')->references('id')->on('w_m_category_menus');
-        });
-
     }
 
     /**
@@ -35,6 +28,6 @@ class CreateWMMenusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('w_m_menus');
+        Schema::dropIfExists('w_m_category_menus');
     }
 }

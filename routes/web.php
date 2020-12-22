@@ -67,3 +67,5 @@ Route::get('lang/{language}', 'LocalizationController@switch')->name('localizati
 Route::resource('backend_partner','BackendPartnerController');
 
 Route::resource('backend_menu','BackendMenuController');
+
+Route::resource('category_menu','CatMenuController');

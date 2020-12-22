@@ -59,12 +59,19 @@
                 <p>CABANG</p>
                 </a>
               </li>
-              {{-- <li class="nav-item">
+              <li class="nav-item">
+                <a href="{{route('category_menu.index')}}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>CATEGORY MENU</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="{{route('backend_menu.index')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>MENU</p>
                 </a>
-              </li> --}}
+              </li>
+
             </ul>
             {{-- @foreach ($menu as $m)
             <li class="nav-item">

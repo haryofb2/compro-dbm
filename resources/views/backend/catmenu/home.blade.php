@@ -4,20 +4,18 @@
     <div class="container" style="padding: 30px;">
         <div class="card">
             <div class="card-header">
-              <h3 class="text-center">MASTER MENU</h3>
+              <h3 class="text-center">MASTER CATEGORY MENU</h3>
             </div>
             <div class="card-body">
                   <!-- MULAI TOMBOL TAMBAH -->
                   <a href="javascript:void(0)" class="btn btn-info" id="tombol-tambah">Tambah Master</a>
                   <br><br>
                   <!-- AKHIR TOMBOL -->
-                <table class="table table-striped table-bordered " id="table_menu">
+                <table class="table table-striped table-bordered " id="table_catmenu">
                     <thead>
                         <tr>
                             <th>Id</th>
                             <th>Nama</th>
-                            <th>Category Menu</th>
-                            <th>Link</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -44,25 +42,8 @@
                                 <div class="form-group">
                                     <label for="name" class="col-sm-12 control-label">Name</label>
                                     <div class="col-sm-12">
-                                        <input type="text" class="form-control" id="name" name="name" value="" required>
-                                    </div>
-                                </div>
-                                {{-- <div class="form-group">
-                                    <label for="name" class="col-sm-12 control-label">Category Menu</label>
-                                    <div class="col-sm-12">
-                                        <select name="divition_id" id="divition_id" class="form-control required">
-                                            @foreach ($divition as $d)
-                                            <option value="{{$d->id}}">
-                                                {{$d->name}}
-                                            </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div> --}}
-                                <div class="form-group">
-                                    <label for="name" class="col-sm-12 control-label">Link</label>
-                                    <div class="col-sm-12">
-                                        <input type="text" class="form-control" id="link" name="link" value="" required>
+                                        <input type="text" class="form-control" id="name" name="name"
+                                            value="" required>
                                     </div>
                                 </div>
                             </div>
@@ -131,6 +112,6 @@ $(document).ready(function() {
 } );
 </script> --}}
 
-@include('backend.menu.js')
+@include('backend.cabang.js')
 
 @endsection

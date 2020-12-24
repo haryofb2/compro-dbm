@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Menu;
+use App\Catmenu;
 
 class BackendMenuController extends Controller
 {
@@ -21,8 +22,9 @@ class BackendMenuController extends Controller
 
      public function index(Request $request)
     {
-        $menu = Menu::all();
-        // var_dump($category);
+        $catmenu = Catmenu::all();
+        $menu = Menu::with(['catmenu'])->get();
+        // console.log($menu);
         if($request->ajax()){
             return datatables()->of($menu)
             ->addcolumn('action',function($data){
@@ -37,7 +39,7 @@ class BackendMenuController extends Controller
             ->make(true);
         }
 
-        return view('backend.menu.home',compact('menu'));
+        return view('backend.menu.home',compact('menu','catmenu'));
     }
 
     /**
@@ -52,6 +54,7 @@ class BackendMenuController extends Controller
         $post   =   Menu::updateOrCreate(['id' => $id],
                     [
                         'name' => $request->name,
+                        'category_menu' => $request->category_menu,
                         'link' => $request->link,
                     ]);
 
@@ -66,7 +69,7 @@ class BackendMenuController extends Controller
     public function edit($id)
     {
         $where = array('id' => $id);
-        $post  = Menu::where($where)->first();
+        $post  = Menu::with(['catmenu'])->where($where)->first();
 
         return response()->json($post);
     }

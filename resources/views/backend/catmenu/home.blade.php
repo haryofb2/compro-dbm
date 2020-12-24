@@ -4,14 +4,31 @@
     <div class="container" style="padding: 30px;">
         <div class="card">
             <div class="card-header">
-              <h3 class="text-center">MASTER CATEGORY MENU</h3>
+              <h3 class="text-center">MASTER INFO</h3>
             </div>
             <div class="card-body">
-                  <!-- MULAI TOMBOL TAMBAH -->
-                  <a href="javascript:void(0)" class="btn btn-info" id="tombol-tambah">Tambah Master</a>
+                   <!-- MULAI DATE RANGE PICKER -->
+                {{-- <div class="row input-daterange">
+                    <div class="col-md-4">
+                        <input type="text" name="from_date" id="from_date" class="form-control" placeholder="From Date"
+                            readonly />
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" name="to_date" id="to_date" class="form-control" placeholder="To Date"
+                            readonly />
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" name="filter" id="filter" class="btn btn-primary">Filter</button>
+                        <button type="button" name="refresh" id="refresh" class="btn btn-default">Refresh</button>
+                    </div>
+                </div>
+                <br> --}}
+                <!-- AKHIR DATE RANGE PICKER -->
+                <!-- MULAI TOMBOL TAMBAH -->
+                  <a href="javascript:void(0)" class="btn btn-info" id="tombol-tambah">Tambah Category Menu</a>
                   <br><br>
                   <!-- AKHIR TOMBOL -->
-                <table class="table table-striped table-bordered " id="table_catmenu">
+                <table class="table table-striped table-bordered " id="table_info">
                     <thead>
                         <tr>
                             <th>Id</th>
@@ -46,6 +63,33 @@
                                             value="" required>
                                     </div>
                                 </div>
+
+                                {{-- <div class="form-group">
+                                    <label for="name" class="col-sm-12 control-label">Cabang</label>
+                                    <div class="col-sm-12">
+                                        <select name="cabang_id" id="cabang_id" class="form-control required">
+                                            @foreach ($cabang as $cabang)
+                                            <option value="{{$cabang->id}}">
+                                                {{$cabang->name}}
+                                            </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Image</label>
+                                        <div class="col-sm-12">
+                                            <input id="image" type="file" name="image" >
+                                            <input type="hidden" name="hidden_image" id="hidden_image">
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name" class="col-sm-12 control-label">Description</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="description" name="description"
+                                            value="">
+                                    </div>
+                                </div> --}}
                             </div>
 
                             <div class="col-sm-offset-2 col-sm-12">
@@ -77,7 +121,7 @@
                 </div>
                 <div class="modal-body">
                     <p><b>Jika menghapus data ini maka</b></p>
-                    <p>*data kategori tersebut hilang selamanya, apakah anda yakin?</p>
+                    <p>*data tersebut hilang selamanya, apakah anda yakin?</p>
                 </div>
                 <div class="modal-footer bg-whitesmoke br">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -95,11 +139,11 @@
 @section('content-js')
 {{-- <script type="text/javascript">
 $(document).ready(function() {
-    $('#category_picture').DataTable({
+    $('#category_image').DataTable({
         processing :true,
         serverSide :true,
         ajax :{
-            url:"{{ route('backend.category.picture.home')}}",
+            url:"{{ route('backend.category.image.home')}}",
             type:'GET'
         },
         columns:[
@@ -112,6 +156,6 @@ $(document).ready(function() {
 } );
 </script> --}}
 
-@include('backend.cabang.js')
+@include('backend.catmenu.js')
 
 @endsection

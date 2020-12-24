@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class CatMenu extends Model
+class Catmenu extends Model
 {
     protected $table = 'w_m_category_menus';
     use SoftDeletes;

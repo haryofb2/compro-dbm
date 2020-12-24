@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\CatMenu;
+use App\Catmenu;
 use Illuminate\Http\Request;
 
 class CatMenuController extends Controller
@@ -15,13 +15,13 @@ class CatMenuController extends Controller
 
     public function datatables()
     {
-        return datatables (CatMenu::all())->toJson();
+        return datatables (Catmenu::all())->toJson();
     }
 
 
      public function index(Request $request)
     {
-        $catmenu = CatMenu::all();
+        $catmenu = Catmenu::all();
         // var_dump($category);
         if($request->ajax()){
             return datatables()->of($catmenu)
@@ -48,7 +48,7 @@ class CatMenuController extends Controller
     {
         $id = $request->id;
 
-        $post   =   CatMenu::updateOrCreate(['id' => $id],
+        $post   =   Catmenu::updateOrCreate(['id' => $id],
                     [
                         'name' => $request->name,
                     ]);
@@ -64,7 +64,7 @@ class CatMenuController extends Controller
     public function edit($id)
     {
         $where = array('id' => $id);
-        $post  = CatMenu::where($where)->first();
+        $post  = Catmenu::where($where)->first();
 
         return response()->json($post);
     }
@@ -77,7 +77,7 @@ class CatMenuController extends Controller
      */
     public function destroy($id)
     {
-        $post = CatMenu::where('id',$id)->delete();
+        $post = Catmenu::where('id',$id)->delete();
 
         return response()->json($post);
     }

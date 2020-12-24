@@ -15,6 +15,6 @@ class Menu extends Model
 
     public function catmenu()
     {
-        return $this->belongsTo(CatMenu::class);
+        return $this->belongsTo(Catmenu::class);
     }
 }

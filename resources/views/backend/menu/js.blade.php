@@ -40,6 +40,10 @@
             name:'name'
             },
             {
+            data:'category.name',
+            name:'category'
+            },
+            {
             data:'link',
             name:'link'
             },
@@ -48,6 +52,7 @@
             name:'action'
             },
         ],
+
         order:[[0,'asc']]
     });
     });
@@ -101,6 +106,7 @@
             //set value masing-masing id berdasarkan data yg diperoleh dari ajax get request diatas
             $('#id').val(data.id);
             $('#name').val(data.name);
+            $('#category_menu').val(data.catmenu.id);
             $('#link').val(data.link);
 
         })

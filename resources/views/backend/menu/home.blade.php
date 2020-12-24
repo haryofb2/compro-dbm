@@ -47,18 +47,18 @@
                                         <input type="text" class="form-control" id="name" name="name" value="" required>
                                     </div>
                                 </div>
-                                {{-- <div class="form-group">
+                                <div class="form-group">
                                     <label for="name" class="col-sm-12 control-label">Category Menu</label>
                                     <div class="col-sm-12">
-                                        <select name="divition_id" id="divition_id" class="form-control required">
-                                            @foreach ($divition as $d)
-                                            <option value="{{$d->id}}">
-                                                {{$d->name}}
+                                        <select name="category_menu" id="category_menu" class="form-control required">
+                                            @foreach ($catmenu as $cat)
+                                            <option value="{{$cat->id}}">
+                                                {{$cat->name}}
                                             </option>
                                             @endforeach
                                         </select>
                                     </div>
-                                </div> --}}
+                                </div>
                                 <div class="form-group">
                                     <label for="name" class="col-sm-12 control-label">Link</label>
                                     <div class="col-sm-12">

@@ -25,18 +25,18 @@ class HomeController extends Controller
     public function index()
     {
 
-        $master = Menu::where('category','1')->get();
-        $trans = Menu::where('category','2')->get();
-        $menu = Menu::where('category','3')->get();
-        return view('backend.dashboard.home',[
-        //     'div' => $div,
-        //     'pos' => $pos,
-        //     'emp' => $emp,
-            'master' => $master,
-            'trans' => $trans,
-            'menu' => $menu,
-        ]);
-        // return view('backend.dashboard.home');
+        // $master = Menu::where('category','1')->get();
+        // $trans = Menu::where('category','2')->get();
+        // $menu = Menu::where('category','3')->get();
+        // return view('backend.dashboard.home',[
+        // //     'div' => $div,
+        // //     'pos' => $pos,
+        // //     'emp' => $emp,
+        //     'master' => $master,
+        //     'trans' => $trans,
+        //     'menu' => $menu,
+        // ]);
+        return view('backend.dashboard.home');
     }
 
     // function switch ($language = '') {

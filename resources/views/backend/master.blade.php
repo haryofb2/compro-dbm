@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>DBM - MINING</title>
+  <title>DBM - ADMIN COMPRO </title>
+  <link href="/frontend/img/logo-tittle.png" rel="icon">
+  <link href="/frontend/img/logo-tittle.png" rel="apple-touch-icon">
+
 
   <meta name="csrf-token" content="{{ csrf_token() }}">
 

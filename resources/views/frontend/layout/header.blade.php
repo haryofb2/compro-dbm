@@ -59,6 +59,7 @@
                     <ul>
                         <li><a href="{{ route('login') }}">admin compro</a></li>
                         <li><a href="#">djava system</a></li>
+                        {{-- link djava system beda domain --}}
                     </ul>
                 </li>
 

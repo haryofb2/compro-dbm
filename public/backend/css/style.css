@@ -96,4 +96,37 @@
   }
 }
 
+.sidebar .info h3{
+  color: white;
+  /* text-align: center; */
+  margin-left: 10px;
+  /* margin-right: auto; */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: -5px;
+}
+.sidebar .info p{
+  color: white;
+  /* text-align: center; */
+  margin-left: 10px;
+  /* margin-right: auto; */
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: -5px;
+  
+}
+
+.brand-link .brand{
+  font-weight: 100px;
+  color: white;
+  font-size: 20x;
+  letter-spacing: 3px;
+  margin-left: 15px;
+}
+
+.main-sidebar{
+  width: 260px;
+}
+
 

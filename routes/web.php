@@ -69,3 +69,9 @@ Route::resource('backend_partner','BackendPartnerController');
 Route::resource('backend_menu','BackendMenuController');
 
 Route::resource('category_menu','CatMenuController');
+
+Route::resource('backend_fuel','BackendFuelController');
+
+Route::resource('backend_obb','BackendObbController');
+
+Route::resource('backend_ore','BackendOreController');

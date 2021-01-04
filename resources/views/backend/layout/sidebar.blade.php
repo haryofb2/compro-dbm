@@ -82,17 +82,91 @@
                     </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        <li class="nav-item has-treeview">
+                            <a href="{{route('backend_ore.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>ORE
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{route('backend_ore.index')}}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>actual</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>plan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                     <li class="nav-item">
-                        <a href="{{route('backend_divition.index')}}" class="nav-link">
+                        <a href="{{route('backend_obb.index')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>ORE</p>
+                        <p>OBB
+                            <i class="right fas fa-angle-left"></i>
+
+                        </p>
                         </a>
+                        <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{route('backend_obb.index')}}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>data</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>actual</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>plan</p>
+                                    </a>
+                                </li>
+                            </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('backend_position.index')}}" class="nav-link">
+                        <a href="{{route('backend_fuel.index')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>OBB</p>
+                        <p>FUEL
+                            <i class="right fas fa-angle-left"></i>
+
+                        </p>
                         </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{route('backend_fuel.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>data</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                <p>actual</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                <p>plan</p>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     </ul>
                 </li>
@@ -136,7 +210,7 @@
             <a class="nav-link" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
-                <i class="nav-icon far fa-power-on"></i>
+                <i class="nav-icon far fa-image"></i>
                     <p>LOG OUT</p>
             </a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

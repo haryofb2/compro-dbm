@@ -14,7 +14,11 @@ class CreateFuelTable extends Migration
     public function up()
     {
         Schema::create('fuel', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->date('date');
+            $table->integer('actual')->nullable();
+            $table->integer('plan')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

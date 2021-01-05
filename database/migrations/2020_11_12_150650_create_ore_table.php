@@ -16,8 +16,8 @@ class CreateOreTable extends Migration
         Schema::create('ore', function (Blueprint $table) {
             $table->increments('id');
             $table->date('date');
-            $table->integer('actual')->nullable();
             $table->integer('plan')->nullable();
+            $table->integer('actual')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

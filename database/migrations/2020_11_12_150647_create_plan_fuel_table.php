@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFuelTable extends Migration
+class CreatePlanFuelTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateFuelTable extends Migration
      */
     public function up()
     {
-        Schema::create('fuel', function (Blueprint $table) {
+        Schema::create('plan_fuel', function (Blueprint $table) {
             $table->increments('id');
             $table->date('date');
-            $table->integer('plan')->nullable();
-            $table->integer('actual')->nullable();
+            $table->integer('value');
+            $table->string('type');
             $table->softDeletes();
             $table->timestamps();
+
         });
     }
 
@@ -30,6 +31,6 @@ class CreateFuelTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fuel');
+        Schema::dropIfExists('plan_fuel');
     }
 }

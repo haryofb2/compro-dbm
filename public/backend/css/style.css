@@ -6,7 +6,7 @@
 
 #dashboard{
   background-image: url(../../frontend/img/DJI_0360.png);
-  height: 860px;
+  height: 887px;
   /* width: 1825px; */
   position: relative;
   background-size: cover;
@@ -129,4 +129,17 @@
   width: 260px;
 }
 
+.table{
+  max-width: 100%;
+  letter-spacing: 2px;
+  /* text-align: center; */
+  /* background-color: #35c27b; */
+}
 
+.table thead{
+  background-color: rgba(61, 59, 59, 0.8);
+  color: antiquewhite;
+  text-align: center;
+  text-transform: uppercase;
+  /* border: 10px red; */
+}

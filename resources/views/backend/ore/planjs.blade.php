@@ -32,18 +32,18 @@
             $('#refresh').click(function () {
                 $('#from_date').val('');
                 $('#to_date').val('');
-                $('#table_plan_fuel').DataTable().destroy();
+                $('#table_plan_ore').DataTable().destroy();
                 load_data();
             });
 
     //MULAI DATATABLE
     //script untuk memanggil data json dari server dan menampilkannya berupa datatable
     function load_data(from_date = '', to_date = '') {
-        $('#table_plan_fuel').DataTable({
+        $('#table_plan_ore').DataTable({
             processing :true,
         serverSide :true,
         ajax :{
-            url:"{{ route('backend_plan_fuel.index')}}",
+            url:"{{ route('backend_plan_ore.index')}}",
             type:'GET'
         },
         columns:[
@@ -95,14 +95,14 @@
                 $.ajax({
                     data: $('#form-tambah-edit')
                         .serialize(), //function yang dipakai agar value pada form-control seperti input, textarea, select dll dapat digunakan pada URL query string ketika melakukan ajax request
-                    url: "{{ route('backend_plan_fuel.store') }}", //url simpan data
+                    url: "{{ route('backend_plan_ore.store') }}", //url simpan data
                     type: "POST", //karena simpan kita pakai method POST
                     dataType: 'json', //data tipe kita kirim berupa JSON
                     success: function (data) { //jika berhasil
                         $('#form-tambah-edit').trigger("reset"); //form reset
                         $('#tambah-edit-modal').modal('hide'); //modal hide
                         $('#tombol-simpan').html('Simpan'); //tombol simpan
-                        var oTable = $('#table_plan_fuel').dataTable(); //inialisasi datatable
+                        var oTable = $('#table_plan_ore').dataTable(); //inialisasi datatable
                         oTable.fnDraw(false); //reset datatable
                         iziToast.success({ //tampilkan iziToast dengan notif data berhasil disimpan pada posisi kanan bawah
                             title: 'Data Berhasil Disimpan',
@@ -124,7 +124,7 @@
     //ketika class edit-post yang ada pada tag body di klik maka
     $('body').on('click', '.edit-post', function () {
         var data_id = $(this).data('id');
-        $.get('backend_plan_fuel/' + data_id + '/edit', function (data) {
+        $.get('backend_plan_ore/' + data_id + '/edit', function (data) {
             $('#modal-judul').html("Edit Post");
             $('#tombol-simpan').val("edit-post");
             $('#tambah-edit-modal').modal('show');
@@ -148,7 +148,7 @@
     $('#tombol-hapus').click(function () {
         $.ajax({
 
-            url: "backend_plan_fuel/" + dataId, //eksekusi ajax ke url ini
+            url: "backend_plan_ore/" + dataId, //eksekusi ajax ke url ini
             type: 'delete',
             beforeSend: function () {
                 $('#tombol-hapus').text('Hapus Data'); //set text untuk tombol hapus
@@ -156,7 +156,7 @@
             success: function (data) { //jika sukses
                 setTimeout(function () {
                     $('#konfirmasi-modal').modal('hide'); //sembunyikan konfirmasi modal
-                    var oTable = $('#table_plan_fuel').dataTable();
+                    var oTable = $('#table_plan_ore').dataTable();
                     oTable.fnDraw(false); //reset datatable
                 });
                 iziToast.warning({ //tampilkan izitoast warning

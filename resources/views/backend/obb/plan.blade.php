@@ -4,10 +4,10 @@
     <div class="container" style="padding: 30px;">
         <div class="card">
             <div class="card-header">
-              <h3 class="text-center">MASTER INFO</h3>
+              <h3 class="text-center">MASTER PLAN OBB</h3>
             </div>
             <div class="card-body">
-                   <!-- MULAI DATE RANGE PICKER -->
+                  <!-- MULAI DATE RANGE PICKER -->
                 <div class="row input-daterange">
                     <div class="col-md-4">
                         <input type="text" name="from_date" id="from_date" class="form-control" placeholder="From Date"
@@ -25,18 +25,16 @@
                 <br>
                 <!-- AKHIR DATE RANGE PICKER -->
                 <!-- MULAI TOMBOL TAMBAH -->
-                  <a href="javascript:void(0)" class="btn btn-info" id="tombol-tambah">Tambah Info</a>
+                  <a href="javascript:void(0)" class="btn btn-info" id="tombol-tambah">Tambah Plan Obb</a>
                   <br><br>
                   <!-- AKHIR TOMBOL -->
-                <table class="table table-striped table-bordered " id="table_info">
+                <table class="table table-striped table-bordered " id="table_plan_obb" style="width: 100% !important">
                     <thead>
                         <tr>
-                            <th>Id</th>
-                            <th>Image</th>
-                            <th>Nama</th>
-                            <th>Cabang</th>
-                            <th>Description</th>
-                            <th>Action</th>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Value</th>
                         </tr>
                     </thead>
                 </table>
@@ -60,37 +58,29 @@
                                 <input type="hidden" name="id" id="id">
 
                                 <div class="form-group">
-                                    <label for="name" class="col-sm-12 control-label">Name</label>
+                                    <label for="name" class="col-sm-12 control-label">date</label>
                                     <div class="col-sm-12">
-                                        <input type="text" class="form-control" id="name" name="name"
+                                        <input type="date" class="form-control" id="date" name="date"
                                             value="" required>
                                     </div>
                                 </div>
-
                                 <div class="form-group">
-                                    <label for="name" class="col-sm-12 control-label">Cabang</label>
+                                    <label for="name" class="col-sm-12 control-label">value</label>
                                     <div class="col-sm-12">
-                                        <select name="cabang_id" id="cabang_id" class="form-control required">
-                                            @foreach ($cabang as $cabang)
-                                            <option value="{{$cabang->id}}">
-                                                {{$cabang->name}}
-                                            </option>
-                                            @endforeach
-                                        </select>
+                                        <input type="text" class="form-control" id="value" name="value"
+                                            value="" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">Image</label>
-                                        <div class="col-sm-12">
-                                            <input id="image" type="file" name="image" >
-                                            {{-- <input type="hidden" name="hidden_image" id="hidden_image"> --}}
-                                        </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="name" class="col-sm-12 control-label">Description</label>
+                                    <label for="name" class="col-sm-12 control-label">type</label>
                                     <div class="col-sm-12">
-                                        <input type="text" class="form-control" id="description" name="description"
-                                            value="">
+                                        <select name="type" id="type" class="form-control required">
+                                            <option value="A">Plan A</option>
+                                            <option value="B">Plan B</option>
+                                            <option value="C">Plan C</option>
+                                            <option value="D">Plan D</option>
+                                            <option value="E">Plan E</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -142,11 +132,11 @@
 @section('content-js')
 {{-- <script type="text/javascript">
 $(document).ready(function() {
-    $('#category_image').DataTable({
+    $('#category_picture').DataTable({
         processing :true,
         serverSide :true,
         ajax :{
-            url:"{{ route('backend.category.image.home')}}",
+            url:"{{ route('backend.category.picture.home')}}",
             type:'GET'
         },
         columns:[
@@ -159,6 +149,6 @@ $(document).ready(function() {
 } );
 </script> --}}
 
-@include('backend.info.js')
+@include('backend.obb.planjs')
 
 @endsection

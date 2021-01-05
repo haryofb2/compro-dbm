@@ -4,7 +4,7 @@
     <div class="container" style="padding: 30px;">
         <div class="card">
             <div class="card-header">
-              <h3 class="text-center">MASTER FUEL</h3>
+              <h3 class="text-center">MASTER PLAN FUEL</h3>
             </div>
             <div class="card-body">
                   <!-- MULAI DATE RANGE PICKER -->
@@ -25,16 +25,17 @@
                 <br>
                 <!-- AKHIR DATE RANGE PICKER -->
                 <!-- MULAI TOMBOL TAMBAH -->
-                  <a href="javascript:void(0)" class="btn btn-info" id="tombol-tambah">Tambah Fuel</a>
+                  <a href="javascript:void(0)" class="btn btn-info" id="tombol-tambah">Tambah Plan Fuel</a>
                   <br><br>
                   <!-- AKHIR TOMBOL -->
-                <table class="table table-striped table-bordered " id="table_fuel">
+                <table class="table table-striped table-bordered " id="table_plan_fuel" style="width: 100% !important">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Date</th>
-                            {{-- <th>Actual</th> --}}
-                            <th>Plan</th>
+                            <th>Type</th>
+                            <th>Value</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                 </table>
@@ -65,10 +66,22 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="name" class="col-sm-12 control-label">plan</label>
+                                    <label for="name" class="col-sm-12 control-label">value</label>
                                     <div class="col-sm-12">
-                                        <input type="text" class="form-control" id="plan" name="plan"
+                                        <input type="text" class="form-control" id="value" name="value"
                                             value="" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name" class="col-sm-12 control-label">type</label>
+                                    <div class="col-sm-12">
+                                        <select name="type" id="type" class="form-control required">
+                                            <option value="A">Plan A</option>
+                                            <option value="B">Plan B</option>
+                                            <option value="C">Plan C</option>
+                                            <option value="D">Plan D</option>
+                                            <option value="E">Plan E</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>

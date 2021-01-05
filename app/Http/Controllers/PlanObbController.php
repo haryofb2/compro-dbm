@@ -2,29 +2,49 @@
 
 namespace App\Http\Controllers;
 
-use App\Catmenu;
 use Illuminate\Http\Request;
+use App\Planobb;
 
-class CatMenuController extends Controller
+class PlanObbController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function datatables()
     {
-        return datatables (Catmenu::all())->toJson();
+        return datatables ( Planobb::all())->toJson();
     }
 
 
      public function index(Request $request)
     {
-        $catmenu = Catmenu::all();
+
+        if(!empty($request->from_date))
+        {
+            //Jika tanggal awal(from_date) hingga tanggal akhir(to_date) adalah sama maka
+            if($request->from_date === $request->to_date){
+                //kita filter tanggalnya sesuai dengan request from_date
+                $event = Planobb::whereDate('date','=', $request->from_date)->get();
+            }
+            else{
+                //kita filter dari tanggal awal ke akhir
+                $event = Planobb::whereBetween('date', array($request->from_date, $request->to_date))->get();
+            }
+        }
+        //load data default
+        else
+
+        $divition = Planobb::all();
         // var_dump($category);
         if($request->ajax()){
-            return datatables()->of($catmenu)
+            return datatables()->of($divition)
             ->addcolumn('action',function($data){
                 $button = '<a href="javascript:void(0)" data-toggle="tootip"  data-id="'.$data->id.'" data-original-title="Edit" class="edit btn btn-info btn-sm edit-post"><i class="far fa-edit"></i> Edit</a>';
                 $button .= '&nbsp;&nbsp;';
@@ -36,7 +56,7 @@ class CatMenuController extends Controller
             ->make(true);
         }
 
-        return view('backend.catmenu.home',compact('catmenu'));
+        return view('backend.obb.plan',compact('divition'));
     }
 
     /**
@@ -48,9 +68,11 @@ class CatMenuController extends Controller
     {
         $id = $request->id;
 
-        $post   =   Catmenu::updateOrCreate(['id' => $id],
+        $post   =   Planobb::updateOrCreate(['id' => $id],
                     [
-                        'name' => $request->name,
+                        'date' => $request->date,
+                        'type'=> $request->type,
+                        'value' => $request->value
                     ]);
 
         return response()->json($post);
@@ -64,7 +86,7 @@ class CatMenuController extends Controller
     public function edit($id)
     {
         $where = array('id' => $id);
-        $post  = Catmenu::where($where)->first();
+        $post  = Planobb::where($where)->first();
 
         return response()->json($post);
     }
@@ -77,7 +99,7 @@ class CatMenuController extends Controller
      */
     public function destroy($id)
     {
-        $post = Catmenu::where('id',$id)->delete();
+        $post = Planobb::where('id',$id)->delete();
 
         return response()->json($post);
     }

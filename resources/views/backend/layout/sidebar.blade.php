@@ -97,6 +97,12 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
+                                    <a href="{{route('backend_actual_ore.index')}}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>actual</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
                                     <a href="{{route('backend_plan_ore.index')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>plan</p>
@@ -120,6 +126,12 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
+                                    <a href="{{route('backend_actual_obb.index')}}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>actual</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
                                     <a href="{{route('backend_plan_obb.index')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>plan</p>
@@ -140,6 +152,12 @@
                                 <a href="{{route('backend_fuel.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>data</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('backend_actual_fuel.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>actual</p>
                                 </a>
                             </li>
                             <li class="nav-item">

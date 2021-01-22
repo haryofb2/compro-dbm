@@ -71,12 +71,21 @@
 
      //TOMBOL TAMBAH DATA
     //jika tombol-tambah diklik maka
-    $('#tombol-tambah').click(function () {
+    $('#tombol-tambah-plan').click(function () {
         $('#button-simpan').val("create-post"); //valuenya menjadi create-post
         $('#id').val(''); //valuenya menjadi kosong
         $('#form-tambah-edit').trigger("reset"); //mereset semua input dll didalamnya
         $('#modal-judul').html("Tambah Kategori Baru"); //valuenya tambah pegawai baru
         $('#tambah-edit-modal').modal('show'); //modal tampil
+    });
+
+    $('#tombol-tambah-plan').click(function () {
+        $('#button-simpan').val("create-post"); //valuenya menjadi create-post
+        $('#id').val(''); //valuenya menjadi kosong
+        $('#form-tambah-edit').trigger("reset"); //mereset semua input dll didalamnya
+        $('#modal-judul').html("Tambah Kategori Baru"); //valuenya tambah pegawai baru
+        $('#tambah-edit-modal').modal('show'); //modal tampil
+        // $('#actual').modal('hide'); //modal tampil
     });
 
 
@@ -128,7 +137,10 @@
 
             //set value masing-masing id berdasarkan data yg diperoleh dari ajax get request diatas
             $('#id').val(data.id);
-            $('#name').val(data.name);
+            $('#date').val(data.date);
+            $('#plan').val(data.plan);
+            $('#actual').val(data.actual);
+
         })
     });
 

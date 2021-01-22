@@ -2,7 +2,7 @@
 @section('content')
 <section id="dashboard">
     <div class="container">
-        <h2>master</h2>
+        <h4>master</h4>
        {{-- <div class="col-6"> --}}
         <a class='menu' href='/backend_info'>
             <button class="button button-menu">
@@ -27,7 +27,7 @@
     </div>
 
     <div class="container">
-        <h2>TRANSACTION</h2>
+        <h4>TRANSACTION</h4>
         {{-- <div class="col-6"> --}}
         <a class='menu' href='/#'>
             <button class="button button-menu">
@@ -50,7 +50,7 @@
     </div>
 
     <div class="container">
-        <h2>menu</h2>
+        <h4>menu</h4>
         {{-- <div class="col-6"> --}}
         <a class='menu' href='/backend_info'>
             <button class="button button-menu">

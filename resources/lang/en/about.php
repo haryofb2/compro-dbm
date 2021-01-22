@@ -1,6 +1,22 @@
 <?php
 return [
-    'about' => 'PT. Djava Berkah Mineral as a company engaged in mining has a commitment to quality to achieve optimal performance in gaining customer trust and satisfaction.',
+    'about' => 'PT. Djava Berkah Mineral is a company based in Jakarta. Our company focuses on the mining business with interests and experience especially in the mining contractor field.
+
+    Established in 2017, equipped with experience and competent experts in their respective fields, PT. Djava Berkah Mineral has become a growing company with the number of employees more than 200 manpower.
+
+    Currently PT. Djava Berkah Mineral focuses on mining in North Morowali, Central Sulawesi at PT. Bukit Makmur Istindo Nikeltama (BUMANIK) with a land area of ​​4998 hectares.
+
+    Our commitment is to provide nickel production solutions with the best mining techniques so that the planned Material Planning is in accordance with the actual process.',
+
+
+    'about1' => '   PT. Djava Berkah Mineral is a company based in Jakarta. Our company focuses on the mining business with interests and experience especially in the mining contractor field.',
+
+    'about2' => '   Established in 2017, equipped with experience and competent experts in their respective fields, PT. Djava Berkah Mineral has become a growing company with the number of employees more than 200 manpower.',
+
+    'about3' => '   Currently PT. Djava Berkah Mineral focuses on mining in North Morowali, Central Sulawesi at PT. Bukit Makmur Istindo Nikeltama (BUMANIK) with a land area of ​​4998 hectares.',
+
+    'about4' => '   Our commitment is to provide nickel production solutions with the best mining techniques so that the planned Material Planning is in accordance with the actual process.',
+
     'vision' => [
 		"vision" => "vision",
 		"text" => "Become a National Company that Develops the Use of Local Resources Aspects with a Sustainable Development Process.",

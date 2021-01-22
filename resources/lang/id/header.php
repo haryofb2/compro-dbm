@@ -17,7 +17,7 @@ return [
     "language" => [
 		"language" => "language",
         "english" => "english",
-        "indonesia" => "indonesian"
+        "indonesia" => "indonesia"
 	],
 ];
 

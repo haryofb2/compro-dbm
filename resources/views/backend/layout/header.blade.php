@@ -33,11 +33,11 @@
       <!-- Messages Dropdown Menu -->
       <div class="pull-right">
         {{-- <a href="#" class="btn btn-default btn-flat">Sign out</a> --}}
-        <div class="btn btn-default btn-flat" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{{ route('logout') }}"
+        <div class="btn1 " aria-labelledby="navbarDropdown">
+          <a href="{{ route('logout') }}"
              onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();">
-              {{ __('Logout') }}
+              <p>log out</p>
           </a>
 
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

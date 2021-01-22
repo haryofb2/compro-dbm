@@ -81,3 +81,9 @@ Route::resource('backend_plan_ore','PlanOreController');
 Route::resource('backend_plan_obb','PlanObbController');
 
 Route::resource('backend_plan_fuel','PlanFuelController');
+
+Route::resource("backend_actual_ore",'ActualOreController');
+
+Route::resource("backend_actual_obb",'ActualObbController');
+
+Route::resource("backend_actual_fuel",'ActualFuelController');

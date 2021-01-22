@@ -1,0 +1,268 @@
+@extends('frontend.master')
+
+@section('content')
+
+<style>
+  .carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* position: relative; */
+}
+/* #header{
+    height:70px !important;
+    padding:10px !important;
+} */
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition: opacity 2s; /* The 0.5s describes the duration to make the opacity from 0 to 1 */
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+@media (max-width: 769px) {
+.carousel-caption {
+    top:15%;
+   z-index:99;
+}
+.lead{
+    font-size:16px;
+}
+}
+@media (min-width: 769px) {
+.carousel-caption {
+    top:25%;
+   z-index:99;
+}
+}
+.lead{
+    text-align:justify;
+}
+.display-4{
+     font-weight: bold;
+     color: rgba(45, 243, 144) !important;
+    text-align:left;
+    /*-webkit-text-stroke: 1px black;*/
+    /*position:absolute;*/
+
+}
+
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+  .carousel-fade .carousel-inner > .item.next,
+  .carousel-fade .carousel-inner > .item.active.right {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.prev,
+  .carousel-fade .carousel-inner > .item.active.left {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.next.left,
+  .carousel-fade .carousel-inner > .item.prev.right,
+  .carousel-fade .carousel-inner > .item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+div.transbox {
+    z-index:9;
+      background: rgba(0, 0, 0, 0.5);
+    /*opacity: 0.4;*/
+    width:100%;
+    height:1000px;
+    /*padding:50px;*/
+    position:relative;
+    /*filter: alpha(opacity=20);*/
+}
+</style>
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">-->
+<!--  <div class="container">-->
+<!--    <a class="navbar-brand" href="#">Start Bootstrap</a>-->
+<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--          <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+<!--    <div class="collapse navbar-collapse" id="navbarResponsive">-->
+<!--      <ul class="navbar-nav ml-auto">-->
+<!--        <li class="nav-item active">-->
+<!--          <a class="nav-link" href="#">Home-->
+<!--                <span class="sr-only">(current)</span>-->
+<!--              </a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" href="#">About</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" href="#">Services</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" href="#">Contact</a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</nav>-->
+<div id="hero">
+
+     <!--<h1><i class="fas fa-mouse"></i>k</h1>-->
+    <div class="container-fluid main">
+        {{-- <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div style="position:absolute;margin-top:900px;z-index:99999999;width:100%;text-align:center;color:#fff; ">
+                <a class="scroll">Scroll</a>
+            </div>
+            <div class="carousel-inner" role="listbox">
+            <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image: url('../frontend/img/DJI_0360.jpg')">
+                    <div class="transbox">
+                    </div>
+                </div>
+                <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('../frontend/img/DJI_0026.jpg')">
+                    <div class="transbox">
+                    </div>
+                </div>
+                <!--Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('../frontend/img/DJI_0325.jpg')">
+                    <div class="transbox">
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('../frontend/img/DJI_0325.jpg')">
+                    <div class="transbox">
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+
+        {{-- <div class="covertext">
+            <div class="col-lg-12" style="float:none; margin:0 auto;">
+                <h1 class="title">DJAVA BERKAH MINERAL</h1>
+                <h3 class="subtitle">{{ __('home.motto') }}</h3>
+            </div>
+        </div> --}}
+
+
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div style="position:absolute;margin-top:900px;z-index:99999999;width:100%;text-align:center;color:#fff; ">
+                <a class="scroll">Scroll</a>
+            </div>
+            <div class="carousel-inner" role="listbox">
+            <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image: url('../frontend/img/DJI_0360.jpg')">
+                    <div class="transbox"></div>
+                    <div class="carousel-caption">
+                        <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <img src="../frontend/img/img_0309.jpg" alt="Card image" style="width:100%">
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <h2 class="display-4">Mining</h2>
+                        <p class="lead">Mining is the extraction of valuable minerals or other geological materials from the Earth, usually from an ore body, lode, vein, seam, reef or placer deposit. These deposits form a mineralized commodity that is of economic interest to the miner.</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('../frontend/img/DJI_0026.jpg')">
+                    <div class="transbox"></div>
+                    <div class="carousel-caption">
+                        <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <img src="../frontend/img/drilling.jpeg" alt="Card image" style="width:100%">
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <h2 class="display-4">Drilling</h2>
+                            <p class="lead">Drilling is a cutting process that uses a drill bit to cut a hole of circular cross-section in solid materials. The drill bit is usually a rotary cutting tool, often multi-point. The bit is pressed against the work-piece and rotated at rates from hundreds to thousands of revolutions per minute. This forces the cutting edge against the work-piece, cutting off chips (swarf) from the hole as it is drilled.</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('../frontend/img/DJI_0325.jpg')">
+                    <div class="transbox"></div>
+                    <div class="carousel-caption">
+                        <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <img src="../frontend/img/img_0335.jpg" alt="Card image" style="width:100%">
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <h2 class="display-4">Construction</h2>
+                            <p class="lead">Construction is a general term meaning the art and science to form objects, systems, or organizations, and comes from Latin constructio (from com- "together" and struere "to pile up") and Old French construction. To construct is the verb: the act of building, and the noun is construction: how something is built, the nature of its structure.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('../frontend/img/DJI_0325.jpg')">
+                    <div class="transbox"></div>
+                    <div class="carousel-caption">
+                        <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <img src="../frontend/img/DJI_0026.jpg" alt="Card image" style="width:100%">
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                            <h2 class="display-4">Shipping</h2>
+                            <p class="lead">We offer tailored shipping and logistics solutions for mining equipment, whether as built-up or knocked-down units, designed to offer you greater flexibility and efficiency savings.</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!--<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">-->
+            <!--      <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+            <!--      <span class="sr-only">Previous</span>-->
+            <!--    </a>-->
+            <!--<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">-->
+            <!--      <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+            <!--      <span class="sr-only">Next</span>-->
+            <!--    </a>-->
+    </div>
+
+</div>
+
+<!--<footer id="footer">-->
+<!--    <div class="footer-top">-->
+<!--      <div class="container">-->
+
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="container">-->
+<!--      <div class="copyright">-->
+<!--        &copy; Copyright <strong>Djava Group</strong>-->
+<!--      </div>-->
+<!--      <div class="credits">-->
+<!--        {{-- Designed by <a href="https://bootstrapmade.com/">IT of Djava Group</a> --}}-->
+<!--        <p>Designed by <strong>IT Department</strong>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </footer> #footer -->
+  <script>
+    $('#carouselExampleIndicators').carousel({
+    pause: "false" /* Change to true to make it paused when your mouse cursor enter the background */
+});
+</script>
+  @endsection

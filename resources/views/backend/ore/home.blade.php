@@ -25,7 +25,7 @@
                 <br>
                 <!-- AKHIR DATE RANGE PICKER -->
                 <!-- MULAI TOMBOL TAMBAH -->
-                  <a href="javascript:void(0)" class="btn btn-info" id="tombol-tambah">Tambah Ore</a>
+                  <a href="javascript:void(0)" class="btn btn-info" id="tombol-tambah-plan">Tambah Plan Ore</a>
                   <br><br>
                   <!-- AKHIR TOMBOL -->
                 <table class="table table-striped table-bordered " id="table_ore">
@@ -42,8 +42,8 @@
         </div>
     </div>
 
-      <!-- MULAI MODAL FORM TAMBAH/EDIT-->
-      <div class="modal fade" id="tambah-edit-modal" aria-hidden="true">
+       <!-- MULAI MODAL FORM TAMBAH/EDIT-->
+       <div class="modal fade" id="tambah-edit-modal" aria-hidden="true">
         <div class="modal-dialog ">
             <div class="modal-content">
                 <div class="modal-header">
@@ -58,10 +58,27 @@
                                 <input type="hidden" name="id" id="id">
 
                                 <div class="form-group">
-                                    <label for="name" class="col-sm-12 control-label">Name</label>
+                                    <label for="date" class="col-sm-12 control-label">date</label>
                                     <div class="col-sm-12">
-                                        <input type="text" class="form-control" id="name" name="name"
+                                        <input type="date" class="form-control" id="date" name="date"
                                             value="" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="plan" class="col-sm-12 control-label">plan</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="plan" name="plan"
+                                            value="" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" id="actual">
+                                    <label for="actual" class="col-sm-12 control-label">actual</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="actual" name="actual"
+                                            value="">
+                                            <span style="color: red">*actual boleh kosong saat memasukan data plan</span>
                                     </div>
                                 </div>
                             </div>
@@ -81,6 +98,7 @@
         </div>
     </div>
     <!-- AKHIR MODAL -->
+
 
     <!-- MULAI MODAL KONFIRMASI DELETE-->
 

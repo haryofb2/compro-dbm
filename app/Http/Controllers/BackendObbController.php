@@ -31,10 +31,12 @@ class BackendObbController extends Controller
             if($request->from_date === $request->to_date){
                 //kita filter tanggalnya sesuai dengan request from_date
                 $event = Obb::whereDate('date','=', $request->from_date)->get();
+
             }
             else{
                 //kita filter dari tanggal awal ke akhir
                 $event = Obb::whereBetween('date', array($request->from_date, $request->to_date))->get();
+
             }
         }
         //load data default

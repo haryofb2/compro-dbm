@@ -65,10 +65,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="name" class="col-sm-12 control-label">plan</label>
+                                    <label for="name" class="col-sm-12 control-label">Plan</label>
                                     <div class="col-sm-12">
-                                        <input type="text" class="form-control" id="plan" name="plan"
-                                            value="" required>
+                                        <select name="type" id="type" class="form-control required">
+                                            <option value="A">Plan A</option>
+                                            <option value="B">Plan B</option>
+                                            <option value="C">Plan C</option>
+                                            <option value="D">Plan D</option>
+                                            <option value="E">Plan E</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">

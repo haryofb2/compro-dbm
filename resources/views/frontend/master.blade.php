@@ -19,30 +19,44 @@
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
    {{-- akhir datatable card --}}
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">-->
 
 
   <!-- Favicons -->
-  <link href="/frontend/img/logo-tittle.png" rel="icon">
-  <link href="/frontend/img/logo-tittle.png" rel="apple-touch-icon">
+  <link href="../frontend/img/logo-tittle.png" rel="icon">
+  <link href="../frontend/img/logo-tittle.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="/frontend/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!--<link href="../frontend/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
 
   <!-- Libraries CSS Files -->
-  <link href="/frontend/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="/frontend/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="../frontend/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../frontend/lib/animate/animate.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="/frontend/css/style.css" rel="stylesheet">
+  <link href="../frontend/css/style.css" rel="stylesheet">
 
-  <script src="https://code.jquery.com/jquery-1.10.2.js" integrity="sha256-it5nQKHTz+34HijZJQkpNBIHsjpV8b6QzMJs9tmOBSo=" crossorigin="anonymous"></script>
-  <script src="jquery.backstretch.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!--<script src="https://code.jquery.com/jquery-1.10.2.js" integrity="sha256-it5nQKHTz+34HijZJQkpNBIHsjpV8b6QzMJs9tmOBSo=" crossorigin="anonymous"></script>-->
+  <!--<script src="jquery.backstretch.min.js"></script>-->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>-->
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+
+{{-- plugin w3school --}}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!--ini plugin baru-->
+  <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+
+  {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> --}}
+{{-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> --}}
+
+
   <script src="https://code.highcharts.com/highcharts.js"></script>
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
@@ -127,6 +141,7 @@
   <script src="/frontend/lib/jquery/jquery.min.js"></script>
   <script src="/frontend/lib/jquery/jquery-migrate.min.js"></script>
   <script src="/frontend/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="/frontend/lib/easing/easing.min.js"></script>
   <script src="/frontend/lib/wow/wow.min.js"></script>
   <script src="/frontend/lib/counterup/counterup.min.js"></script>

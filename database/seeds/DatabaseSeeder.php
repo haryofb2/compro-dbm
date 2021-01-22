@@ -1,5 +1,8 @@
 <?php
 
+use App\Planfuel;
+use App\Planobb;
+use App\Planore;
 use App\Service;
 use Illuminate\Database\Seeder;
 
@@ -23,10 +26,9 @@ class DatabaseSeeder extends Seeder
             ServiceSeeder::class,
             CatmenuSeeder::class,
             MenuSeeder::class,
-
-            // CategoryPictureSeeder::class,
-            // GallerySeeder::class,
-            // CategoryInfoSeeder::class,
+            FuelSeeder::class,
+            ObbSeeder::class,
+            OreSeeder::class,
 
             ]
         );

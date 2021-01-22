@@ -15,7 +15,7 @@ return [
 		"event" => "event",
     ],
     "language" => [
-		"language" => "language",
+		"language" => "bahasa",
         "english" => "english",
         "indonesia" => "indonesian"
 	],

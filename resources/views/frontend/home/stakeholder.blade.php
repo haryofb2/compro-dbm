@@ -12,7 +12,7 @@
           <p class="lead">Menjadi Perusahaan Nasional yang Mengembangkan Penggunaan Aspek Sumber Daya Lokal Dengan Proses Pengembangan yang Berkesinambungan.</p>
           </div> --}}
         </div>
-      </div>
+    </div>
 
         <div class="container">
 
@@ -32,19 +32,18 @@
                     @foreach ($emp as $emp)
                     <div class=" card testimonial-card col-lg-4 col-md-6" style="border:none; !important">
                         <div class="member">
-                        <div class="pic"><img src="/frontend/img/upload/employee/{{$emp->image}}" alt="" class="img-responsive img-thumbnail"></div>
-                            <div class="card-body">
-                            <h4>{{$emp->name}}</h4>
-                            <span>{{$emp->position->name}} of {{$emp->divition->name}}</span>
-                            <br>
-                            <p class="quote">{{$emp->quote}}</p>
+                            <div class="pic"><img src="/frontend/img/upload/employee/{{$emp->image}}" alt="" class="img-responsive img-thumbnail"></div>
+                                <div class="card-body">
+                                    <h4>{{$emp->name}}</h4>
+                                    <span>{{$emp->position->name}} of {{$emp->divition->name}}</span>
+                                    <br>
+                                    <p class="quote">{{$emp->quote}}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     @endforeach
                 </div>
-            </div>
-    </div>
+        </div>
   </section><!-- #team -->
 
   @endsection

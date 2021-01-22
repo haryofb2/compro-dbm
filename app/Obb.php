@@ -12,4 +12,10 @@ class Obb extends Model
     protected $dates = ['deleted_at'];
 
     protected $guarded = [];
+
+    // public function planobb()
+    // {
+    //     return $this->belongsTo("App\Planobb");
+    // }
+
 }

@@ -12,4 +12,9 @@ class Fuel extends Model
     protected $dates = ['deleted_at'];
 
     protected $guarded = [];
+
+    // public function planfuel()
+    // {
+    //     return $this->belongsTo("App\Planfuel");
+    // }
 }

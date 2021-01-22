@@ -16,11 +16,12 @@ class CreateObbTable extends Migration
         Schema::create('obb', function (Blueprint $table) {
             $table->increments('id');
             $table->date('date');
-            $table->integer('plan')->nullable();
             $table->integer('actual')->nullable();
+            $table->integer('plan');
             $table->softDeletes();
             $table->timestamps();
         });
+
     }
 
     /**
